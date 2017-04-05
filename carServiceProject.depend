@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1491218069 source:c:\development\c++\carserviceproject\engine.cpp
+	"Engine.h"
+
+1491218122 c:\development\c++\carserviceproject\engine.h
+	<iostream>
+	<string>
+
+1491229406 source:c:\development\c++\carserviceproject\main.cpp
+	<iostream>
+	"car.h"
+
+1491229385 c:\development\c++\carserviceproject\car.h
+	"Engine.h"
+
+1491229378 source:c:\development\c++\carserviceproject\car.cpp
+	"car.h"
+	<iostream>
+
+1491392593 source:c:\development\c++\git\carservice\car.cpp
+	"car.h"
+
+1491392840 c:\development\c++\git\carservice\car.h
+	"Engine.h"
+
+1491392910 c:\development\c++\git\carservice\engine.h
+	<iostream>
+	<string>
+	"EngineType.h"
+
+1491392808 source:c:\development\c++\git\carservice\engine.cpp
+	"Engine.h"
+
+1491393935 source:c:\development\c++\git\carservice\main.cpp
+	<iostream>
+	"carserviceinterface.h"
+
+1491258294 source:c:\development\c++\carservice\car.cpp
+	"car.h"
+
+1491257994 c:\development\c++\carservice\car.h
+	"Engine.h"
+	<string>
+
+1491257994 c:\development\c++\carservice\engine.h
+	<iostream>
+	<string>
+
+1491257994 source:c:\development\c++\carservice\engine.cpp
+	"Engine.h"
+
+1491313208 c:\development\c++\git\carservice\enginetype.h
+
+1491393948 source:c:\development\c++\git\carservice\carrepository.cpp
+	"carrepository.h"
+
+1491392858 c:\development\c++\git\carservice\carrepository.h
+	"car.h"
+	<vector>
+
+1491389173 source:c:\development\c++\git\carservice\carserviceinterface.cpp
+	"carserviceinterface.h"
+
+1491389186 c:\development\c++\git\carservice\carserviceinterface.h
+	"carrepository.h"
+
