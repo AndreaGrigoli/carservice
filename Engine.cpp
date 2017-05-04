@@ -50,6 +50,7 @@ void Engine::print( ostream & output )
     switch(_type){
     case EngineType::DIESEL : output << " type: DIESEL" << ")"; break;
     case EngineType::GAS : output << " type: GAS" << ")"; break;
+    case EngineType::PETROL : output << " type: PETROL" << ")"; break;
     }
 
 }

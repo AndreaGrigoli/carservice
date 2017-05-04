@@ -17,23 +17,28 @@
 	"car.h"
 	<iostream>
 
-1491392593 source:c:\development\c++\git\carservice\car.cpp
+1493919106 source:c:\development\c++\git\carservice\car.cpp
 	"car.h"
 
-1491392840 c:\development\c++\git\carservice\car.h
+1493918923 c:\development\c++\git\carservice\car.h
+	"AbstractCar.h"
 	"Engine.h"
+	"HorsePower.h"
 
-1491392910 c:\development\c++\git\carservice\engine.h
+1491394886 c:\development\c++\git\carservice\engine.h
 	<iostream>
 	<string>
 	"EngineType.h"
 
-1491392808 source:c:\development\c++\git\carservice\engine.cpp
+1493917950 source:c:\development\c++\git\carservice\engine.cpp
 	"Engine.h"
 
-1491393935 source:c:\development\c++\git\carservice\main.cpp
+1493913868 source:c:\development\c++\git\carservice\main.cpp
 	<iostream>
 	"carserviceinterface.h"
+	"SuvCar.h"
+	"Factory.h"
+	"EconomyCar.h"
 
 1491258294 source:c:\development\c++\carservice\car.cpp
 	"car.h"
@@ -49,18 +54,67 @@
 1491257994 source:c:\development\c++\carservice\engine.cpp
 	"Engine.h"
 
-1491313208 c:\development\c++\git\carservice\enginetype.h
+1493918383 c:\development\c++\git\carservice\enginetype.h
 
-1491393948 source:c:\development\c++\git\carservice\carrepository.cpp
+1493916003 source:c:\development\c++\git\carservice\carrepository.cpp
 	"carrepository.h"
 
-1491392858 c:\development\c++\git\carservice\carrepository.h
+1493907651 c:\development\c++\git\carservice\carrepository.h
 	"car.h"
 	<vector>
 
-1491389173 source:c:\development\c++\git\carservice\carserviceinterface.cpp
+1491394886 source:c:\development\c++\git\carservice\carserviceinterface.cpp
 	"carserviceinterface.h"
 
-1491389186 c:\development\c++\git\carservice\carserviceinterface.h
+1491394886 c:\development\c++\git\carservice\carserviceinterface.h
 	"carrepository.h"
+
+1493896386 c:\development\c++\git\carservice\horsepower.h
+	<iostream>
+	<sstream>
+
+1493896353 source:c:\development\c++\git\carservice\horsepower.cpp
+	"HorsePower.h"
+
+1493908091 source:c:\development\c++\git\carservice\carbuilder.cpp
+	"CarBuilder.h"
+
+1493899033 source:c:\development\c++\git\carservice\director.cpp
+	"carbuilder.h"
+	"car.h"
+
+1493918995 c:\development\c++\git\carservice\carbuilder.h
+	"car.h"
+
+1493899380 source:c:\development\c++\git\carservice\builder.cpp
+	"Builder.h"
+
+1493899343 c:\development\c++\git\carservice\builder.h
+	"HorsePower.h"
+
+1493907173 source:c:\development\c++\git\carservice\abstractcar.cpp
+	"AbstractCar.h"
+
+1493917865 c:\development\c++\git\carservice\abstractcar.h
+	<iostream>
+	"Engine.h"
+
+1493908718 source:c:\development\c++\git\carservice\suvcar.cpp
+	"SuvCar.h"
+
+1493919056 c:\development\c++\git\carservice\suvcar.h
+	"CarBuilder.h"
+
+1493908863 source:c:\development\c++\git\carservice\economycar.cpp
+	"EconomyCar.h"
+
+1493919166 c:\development\c++\git\carservice\economycar.h
+	"car.h"
+	"CarBuilder.h"
+
+1493909060 source:c:\development\c++\git\carservice\factory.cpp
+	"Factory.h"
+
+1493918666 c:\development\c++\git\carservice\factory.h
+	"CarBuilder.h"
 

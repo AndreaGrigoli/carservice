@@ -39,6 +39,10 @@
 		<Unit filename="EngineType.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="HorsePower.cpp" />
+		<Unit filename="HorsePower.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="car.cpp" />
 		<Unit filename="car.h" />
 		<Unit filename="carrepository.cpp" />

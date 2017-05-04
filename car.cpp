@@ -1,36 +1,36 @@
 #include "car.h"
 
 
-Car::Car():_licensePlate("XXXXXXX"), _name("Default_Car")
+Car::Car()
 {
 
-_engine = Engine();
-}
+//_engine = Engine();
 
+}
+/*
 Car::Car(Engine engine,string name) : _licensePlate("XXXXXXX"), _name(name)
 {
     _engine = Engine(engine);
-}
+    //_horsePower = HorsePower(horsePower);
+}*/
 
 
-Car::Car( const Car &car ):_name(car._name),_licensePlate(car._licensePlate),_engine(car._engine),_id(car._id)
+Car::Car( const Car &car ):_name(car._name),_licensePlate(car._licensePlate),_engine(car._engine),_id(car._id),_color(car._color),_wheels(car._wheels),_interior(car._interior),_darkGlass(car._darkGlass),_airConditioning(car._airConditioning),_horsePower(car._horsePower)
 {
 
 
 }
 
-string Car::getLicensePlate(){
-    return _licensePlate;
+
+
+/*
+string Car::getHorsePower(){
+    return _horsePower.getHorsePower();
 }
-
-string Car::getName(){
-    return _name;
-}
-
-
-void Car::setLicensePlate(string licensePlate){
+*/
+/*void Car::setLicensePlate(string licensePlate){
  _licensePlate = licensePlate;
-}
+}*/
 
 
 
@@ -45,6 +45,12 @@ void Car::print( ostream & output )
     output << "(Name: " << _name << endl;
     output << " LicensePlate: " << _licensePlate <<endl;
     output << " Engine: " << _engine  <<endl;
+    output << " Color: " << _color  <<endl;
+    output << " Wheels: " << _wheels  <<endl;
+    output << " Dark Glass: " << _darkGlass  <<endl;
+    output << " Air Conditioning: " << _airConditioning  <<endl;
+    output << " Interior: " << _interior  <<endl;
+   output << " HorsePower: " << _horsePower  <<endl;
     output << ")";
 }
 

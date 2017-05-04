@@ -1,6 +1,9 @@
 
 #include <iostream>
 #include "carserviceinterface.h"
+#include "SuvCar.h"
+#include "Factory.h"
+#include "EconomyCar.h"
 
 using namespace std;
 
@@ -8,15 +11,58 @@ void func(const std::vector<Car>& vec);
 
 int main()
 {
-    cout << "------------- Car Service test -------------" << endl;
+
+    CarBuilder *carSuvBuilder = new SuvCar();
+    CarBuilder *carEconomyBuilder = new EconomyCar();
+
+
+    Factory *fSuv = new Factory(carSuvBuilder);
+    Factory *feconomy = new Factory(carEconomyBuilder);
+
+    fSuv->buildCar("Suv");
+    Car *carSuv = fSuv->getCar();
+
     cout << endl;
-    // CarServiceInterface è la classe che deve utilizzare chi sviluppa la GUI
-    // per interagire con il nostro sistema
+    cout << "------------- Creato SUV: -------------" << endl;
+    cout << endl;
+    cout << *carSuv << endl;
+
+    feconomy->buildCar("500");
+    Car *carEconomy = feconomy->getCar();
+   // cout << *carSuv << endl;
+
+   cout << endl;
+    cout << "------------- Creata 500: -------------" << endl;
+    cout << endl;
+    cout << *carEconomy << endl;
+
+
+
+
+
+
 
     CarServiceInterface carServiceInterface;
+
+
+
+    //il metodo saveCar permette di aggiungere una nuova macchina sul db
+
+    carServiceInterface.saveCar(*carSuv);
+    //cout << *carSuv << endl;
+    carServiceInterface.saveCar(*carEconomy);
+
+     cout << endl;
+    cout << "------------- salvate 2 macchine nel garage: -------------" << endl;
+    cout << endl;
+    //vector<Car> garage = carServiceInterface.getAllCars();
+    //cout << "Garage contains  : " << garage.size() << " cars" << endl;
+
     cout << endl;
     cout << "------------- TEST getAllCars method: -------------" << endl;
     cout << endl;
+
+
 
     //il metodo getAllCars ritorna un vettore di istanze di tipo Car
     vector<Car> garage = carServiceInterface.getAllCars();
@@ -31,18 +77,10 @@ int main()
     cout << endl;
 
     //Il metodo getCar aspetta come parametro il nome della macchina
-    Car car = carServiceInterface.getCar("c2");
+    Car car = carServiceInterface.getCar("Suv");
     cout << car << endl;
+    //cout << car.getHorsePower();
 
-    cout << endl;
-    cout << "------------- TEST saveCar method: -------------" << endl;
-    cout << endl;
-
-    //il metodo saveCar permette di aggiungere una nuova macchina sul db
-    Car cn;
-    carServiceInterface.saveCar(cn);
-    garage = carServiceInterface.getAllCars();
-    cout << "Garage contains  : " << garage.size() << " cars" << endl;
 
     cout << endl;
 
@@ -51,9 +89,11 @@ int main()
     cout << endl;
 
     //Il metodo deleteCar cancella dal DB la macchina
-    carServiceInterface.deleteCar(cn);
+    carServiceInterface.deleteCar(car);
     garage = carServiceInterface.getAllCars();
     cout << "Garage contains  : " << garage.size() << " cars" << endl;
+
+
     return 0;
 }
 
