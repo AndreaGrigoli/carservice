@@ -34,15 +34,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AbstractCar.cpp" />
+		<Unit filename="AbstractCar.h" />
+		<Unit filename="CarBuilder.cpp" />
+		<Unit filename="CarBuilder.h" />
+		<Unit filename="EconomyCar.cpp" />
+		<Unit filename="EconomyCar.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
 		<Unit filename="EngineType.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="Factory.cpp" />
+		<Unit filename="Factory.h" />
 		<Unit filename="HorsePower.cpp" />
 		<Unit filename="HorsePower.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="SuvCar.cpp" />
+		<Unit filename="SuvCar.h" />
 		<Unit filename="car.cpp" />
 		<Unit filename="car.h" />
 		<Unit filename="carrepository.cpp" />

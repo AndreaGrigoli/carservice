@@ -11,16 +11,23 @@ void func(const std::vector<Car>& vec);
 
 int main()
 {
+    //Builder design pattern
 
+
+    //Una classe per ciascuna classe di macchine da creare
     CarBuilder *carSuvBuilder = new SuvCar();
     CarBuilder *carEconomyBuilder = new EconomyCar();
 
-
+    //La classe Factory attraverso il metodo buildCar costruisce la macchina utilizando il CarBuilder passato al costruttore
+    //Vengono cosi  nascosti all'utilizzatore i dettagli implementativi per la creazione dell'oggetto car
     Factory *fSuv = new Factory(carSuvBuilder);
     Factory *feconomy = new Factory(carEconomyBuilder);
 
     fSuv->buildCar("Suv");
     Car *carSuv = fSuv->getCar();
+
+    //FINE Builder design pattern
+
 
     cout << endl;
     cout << "------------- Creato SUV: -------------" << endl;
@@ -37,6 +44,12 @@ int main()
     cout << *carEconomy << endl;
 
 
+     cout << endl;
+    cout << "------------- Modifico 500: -------------" << endl;
+    cout << endl;
+    carEconomy->setColor("Red");
+    carEconomy->setAirConditioning(true);
+    cout << *carEconomy << endl;
 
 
 

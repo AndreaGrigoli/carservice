@@ -21,7 +21,7 @@ CarRepository::~CarRepository()
 void CarRepository::saveCar(Car car)
 {
     _array.push_back(car);
-    cout << "Car : " << car << " saved" << endl;
+   // cout << "Car : " << car << " saved" << endl;
 }
 
 
