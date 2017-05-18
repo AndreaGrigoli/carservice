@@ -3,7 +3,8 @@
 #include "AbstractCar.h"
 #include "Engine.h"
 #include "HorsePower.h"
-
+#include "Boost.h"
+#include <sstream>
 
 
 
@@ -58,10 +59,26 @@ class Car:public AbstractCar
             this->_name = name;
         }
 
-        void setEngine(string engineName,EngineType type)
+         string echoEngine()
         {
-            Engine engine(type,engineName);
-            this->_engine = engine;
+            //cout << "s------------------------"<< endl;
+             ostringstream oss;
+             oss << this->_engine->echoEngine();
+             //oss << "ddddd" ;
+            return oss.str();
+        }
+
+        void setEngine(BaseEngine  & anX)
+        //void setEngine(string engineName,EngineType type)
+        {
+            //BaseEngine *anX = new Boost(new Engine(type,engineName));
+           // Engine engine(type,engineName);
+           // this->_engine = engine;
+           //anX->echoEngine();
+           //cout << anX->getName();
+           //anX->echoEngine();
+            this->_engine = &anX;
+            //this->_engine->echoEngine();
         }
 
          void setHorsePower(int cc,int horsePowerP)
@@ -84,7 +101,7 @@ class Car:public AbstractCar
 
     private:
         int _id;
-        Engine _engine;
+        BaseEngine *_engine;
         HorsePower _horsePower;
         string _color, _wheels, _interior,_licensePlate,_name;
         bool _airConditioning, _darkGlass;

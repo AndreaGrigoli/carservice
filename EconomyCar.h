@@ -38,8 +38,8 @@ class EconomyCar:public CarBuilder{
         car->setWheels("Cerchi Alluminio");
         }
 
-        void buildEngine(){
-        car->setEngine("Motore500",EngineType::PETROL);
+        void buildEngine(BaseEngine  & anX){
+        //car->setEngine("Motore500",EngineType::PETROL);
         }
 
         void buildHorsePower(){

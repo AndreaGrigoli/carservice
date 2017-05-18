@@ -30,8 +30,8 @@ class SuvCar : public CarBuilder
         car->setDarkGlass(true);
         }
 
-        void buildEngine(){
-        car->setEngine("MotoreSuv",EngineType::DIESEL);
+        void buildEngine(BaseEngine  & anX){
+        //car->setEngine("MotoreSuv",EngineType::DIESEL);
         }
 
         void buildHorsePower(){

@@ -44,7 +44,7 @@ void Car::print( ostream & output )
 {
     output << "(Name: " << _name << endl;
     output << " LicensePlate: " << _licensePlate <<endl;
-    output << " Engine: " << _engine  <<endl;
+    output << " Engine: " << *_engine  <<endl;
     output << " Color: " << _color  <<endl;
     output << " Wheels: " << _wheels  <<endl;
     output << " Dark Glass: " << _darkGlass  <<endl;

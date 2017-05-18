@@ -4,6 +4,8 @@
 #include "SuvCar.h"
 #include "Factory.h"
 #include "EconomyCar.h"
+#include "Boost.h"
+#include "Engine.h"
 
 using namespace std;
 
@@ -22,9 +24,13 @@ int main()
     //Vengono cosi  nascosti all'utilizzatore i dettagli implementativi per la creazione dell'oggetto car
     Factory *fSuv = new Factory(carSuvBuilder);
     Factory *feconomy = new Factory(carEconomyBuilder);
+    //string dd = "ddd";
+    BaseEngine *anX = new Boost(new Engine(EngineType::PETROL,"ssss"));
 
-    fSuv->buildCar("Suv");
-    Car *carSuv = fSuv->getCar();
+    anX->echoEngine();
+/*
+   // fSuv->buildCar("Suv",*anX);
+   // Car *carSuv = fSuv->getCar();
 
     //FINE Builder design pattern
 
@@ -34,9 +40,18 @@ int main()
     cout << endl;
     cout << *carSuv << endl;
 
-    feconomy->buildCar("500");
+    cout << endl;
+    cout << "------------- Echo del motore: -------------" << endl;
+    cout << endl;
+    cout << carSuv->echoEngine() << endl;
+
+    BaseEngine *eco = new Boost(new Engine(EngineType::PETROL,"ssss"));
+
+    feconomy->buildCar("500",*eco);
     Car *carEconomy = feconomy->getCar();
    // cout << *carSuv << endl;
+
+    //cout << carEconomy->echoEngine() << endl;
 
    cout << endl;
     cout << "------------- Creata 500: -------------" << endl;
@@ -106,6 +121,8 @@ int main()
     garage = carServiceInterface.getAllCars();
     cout << "Garage contains  : " << garage.size() << " cars" << endl;
 
+    //
+    */
 
     return 0;
 }

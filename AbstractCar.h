@@ -1,7 +1,7 @@
 #ifndef ABSTRACTCAR_H
 #define ABSTRACTCAR_H
 #include <iostream>
-#include "Engine.h"
+#include "BaseEngine.h"
 
 using namespace std;
 class AbstractCar
@@ -15,7 +15,8 @@ class AbstractCar
         virtual void setAirConditioning(bool airConditioning)=0;
         virtual void setDarkGlass(bool darkGlass)=0;
         virtual void setName(string name)=0;
-        virtual void setEngine(string engineName,EngineType type)=0;
+        //virtual void setEngine(string engineName,EngineType type)=0;
+        virtual void setEngine(BaseEngine & baseEngine)=0;
         //virtual void setDarkGlass(bool darkGlass)=0;
        // virtual string getLicensePlate()=0;
        //virtual string getName()=0;
