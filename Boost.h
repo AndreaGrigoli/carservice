@@ -2,6 +2,7 @@
 #define BOOST_H
 #include <iostream>
 #include "Turbo.h"
+#include <sstream>
 using namespace std;
 
 class Boost : public Turbo

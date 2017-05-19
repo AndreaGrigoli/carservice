@@ -18,19 +18,20 @@ int main()
 
     //Una classe per ciascuna classe di macchine da creare
     CarBuilder *carSuvBuilder = new SuvCar();
-    CarBuilder *carEconomyBuilder = new EconomyCar();
+   // CarBuilder *carEconomyBuilder = new EconomyCar();
 
     //La classe Factory attraverso il metodo buildCar costruisce la macchina utilizando il CarBuilder passato al costruttore
     //Vengono cosi  nascosti all'utilizzatore i dettagli implementativi per la creazione dell'oggetto car
     Factory *fSuv = new Factory(carSuvBuilder);
-    Factory *feconomy = new Factory(carEconomyBuilder);
+   // Factory *feconomy = new Factory(carEconomyBuilder);
     //string dd = "ddd";
-    BaseEngine *anX = new Boost(new Engine(EngineType::PETROL,"ssss"));
+    //BaseEngine *turboBoostEngine = new Boost(new Engine(EngineType::PETROL,"MotoreSuv"));
 
-    anX->echoEngine();
-/*
-   // fSuv->buildCar("Suv",*anX);
-   // Car *carSuv = fSuv->getCar();
+    //anX->echoEngine();
+
+    //fSuv->buildCar("Suv",turboBoostEngine);
+    fSuv->buildCar();
+    Car *carSuv = fSuv->getCar();
 
     //FINE Builder design pattern
 
@@ -44,7 +45,7 @@ int main()
     cout << "------------- Echo del motore: -------------" << endl;
     cout << endl;
     cout << carSuv->echoEngine() << endl;
-
+/*
     BaseEngine *eco = new Boost(new Engine(EngineType::PETROL,"ssss"));
 
     feconomy->buildCar("500",*eco);

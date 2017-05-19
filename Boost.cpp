@@ -9,6 +9,9 @@ Boost::~Boost()
 
 
  string Boost::echoEngine() {
-        string echo = Turbo::echoEngine();
-        cout << " !!!!TurboBoost!!!!!";
+      ostringstream oss;
+      oss << Turbo::echoEngine();
+      oss << "Turbo BOOST WROOOM!!!";
+      return oss.str();
+
     }

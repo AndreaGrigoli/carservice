@@ -15,13 +15,23 @@ class Factory
                 return carBuilder->getCar();
             }
 
- void buildCar(string name,BaseEngine  & anX)
+ /*void buildCar(string name,BaseEngine  *anX)
  {
    carBuilder->buildName(name);
    carBuilder->buildColor();
    carBuilder->buildAirConditioning();
    carBuilder->buildDarkGlass();
-   carBuilder->buildEngine(anX);
+   carBuilder->buildEngine(*anX);
+   carBuilder->buildInterior();
+   carBuilder->buildWheels();
+ }*/
+ void buildCar()
+ {
+   carBuilder->buildName();
+   carBuilder->buildColor();
+   carBuilder->buildAirConditioning();
+   carBuilder->buildDarkGlass();
+   carBuilder->buildEngine();
    carBuilder->buildInterior();
    carBuilder->buildWheels();
  }

@@ -11,9 +11,11 @@ class CarBuilder
  virtual void buildWheels()=0;
  virtual void buildAirConditioning()=0;
  virtual void buildDarkGlass()=0;
- virtual void buildEngine(BaseEngine  & anX)=0;
+ //virtual void buildEngine(BaseEngine  & anX)=0;
+ virtual void buildEngine()=0;
  virtual void buildHorsePower()=0;
- virtual void buildName(string name)=0;
+ //virtual void buildName(string name)=0;
+ virtual void buildName()=0;
 
 
 

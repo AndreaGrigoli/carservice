@@ -56,6 +56,7 @@ string BaseEngine::getName()
 
 
 
+
 ostream & operator << ( ostream & output, BaseEngine & engine )
 {
     engine.print( output );

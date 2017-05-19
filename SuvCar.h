@@ -13,8 +13,8 @@ class SuvCar : public CarBuilder
         car = new Car();
         }
 
-        void buildName(string name){
-        car->setName(name);
+        void buildName(){
+        car->setName("SUV");
         }
 
 
@@ -30,8 +30,11 @@ class SuvCar : public CarBuilder
         car->setDarkGlass(true);
         }
 
-        void buildEngine(BaseEngine  & anX){
+        void buildEngine(){
+        //void buildEngine(BaseEngine  & anX){
+        BaseEngine *turboBoostEngine = new Boost(new Engine(EngineType::PETROL,"MotoreSuv"));
         //car->setEngine("MotoreSuv",EngineType::DIESEL);
+        car->setEngine(turboBoostEngine);
         }
 
         void buildHorsePower(){

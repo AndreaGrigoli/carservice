@@ -68,7 +68,7 @@ class Car:public AbstractCar
             return oss.str();
         }
 
-        void setEngine(BaseEngine  & anX)
+        void setEngine(BaseEngine  *anX)
         //void setEngine(string engineName,EngineType type)
         {
             //BaseEngine *anX = new Boost(new Engine(type,engineName));
@@ -77,7 +77,7 @@ class Car:public AbstractCar
            //anX->echoEngine();
            //cout << anX->getName();
            //anX->echoEngine();
-            this->_engine = &anX;
+            this->_engine = anX;
             //this->_engine->echoEngine();
         }
 

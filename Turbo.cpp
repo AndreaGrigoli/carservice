@@ -5,7 +5,9 @@ using namespace std;
 
 
 Turbo::Turbo(BaseEngine *inner) {
+   // m_wrappee->BaseEngine(inner->getType(),inner->getName());
         m_wrappee = inner;
+        //m_wrappee(inner->getType(),inner->getName());
     }
 
    Turbo::~Turbo() {
@@ -16,7 +18,7 @@ Turbo::Turbo(BaseEngine *inner) {
     string Turbo::echoEngine() {
     ostringstream oss;
     //oss << m_wrappee->echoEngine();
-    oss << "ddd";
+    oss << "Turbo WROOOM!!!";
     return oss.str();
        //return  m_wrappee->echoEngine();
     }

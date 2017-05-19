@@ -16,7 +16,7 @@ class AbstractCar
         virtual void setDarkGlass(bool darkGlass)=0;
         virtual void setName(string name)=0;
         //virtual void setEngine(string engineName,EngineType type)=0;
-        virtual void setEngine(BaseEngine & baseEngine)=0;
+        virtual void setEngine(BaseEngine *baseEngine)=0;
         //virtual void setDarkGlass(bool darkGlass)=0;
        // virtual string getLicensePlate()=0;
        //virtual string getName()=0;
