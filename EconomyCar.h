@@ -14,8 +14,8 @@ class EconomyCar:public CarBuilder{
         car = new Car();
         }
 
-        void buildName(string name){
-         car->setName(name);
+        void buildName(){
+         car->setName("ECONOMY");
         }
 
         void buildColor(){
@@ -38,8 +38,10 @@ class EconomyCar:public CarBuilder{
         car->setWheels("Cerchi Alluminio");
         }
 
-        void buildEngine(BaseEngine  & anX){
-        //car->setEngine("Motore500",EngineType::PETROL);
+        void buildEngine(){
+          BaseEngine *turboBoostEngine = new Boost(new Turbo(new Engine(EngineType::PETROL,"Motore500")));
+        //car->setEngine("MotoreSuv",EngineType::DIESEL);
+        car->setEngine(turboBoostEngine);
         }
 
         void buildHorsePower(){

@@ -4,14 +4,14 @@
 Boost::~Boost()
 {
     //dtor
-     cout << "Boost dtor" << "   ";
+    // cout << "Boost dtor" << "   ";
 }
 
 
  string Boost::echoEngine() {
       ostringstream oss;
-      oss << Turbo::echoEngine();
-      oss << "Turbo BOOST WROOOM!!!";
+      oss << Turbo::echoEngine()<< endl;
+      oss << " BOOST";
       return oss.str();
 
     }

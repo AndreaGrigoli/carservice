@@ -32,7 +32,7 @@ class SuvCar : public CarBuilder
 
         void buildEngine(){
         //void buildEngine(BaseEngine  & anX){
-        BaseEngine *turboBoostEngine = new Boost(new Engine(EngineType::PETROL,"MotoreSuv"));
+        BaseEngine *turboBoostEngine = new Boost(new Turbo(new Engine(EngineType::PETROL,"MotoreSuv")));
         //car->setEngine("MotoreSuv",EngineType::DIESEL);
         car->setEngine(turboBoostEngine);
         }

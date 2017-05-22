@@ -18,18 +18,13 @@ int main()
 
     //Una classe per ciascuna classe di macchine da creare
     CarBuilder *carSuvBuilder = new SuvCar();
-   // CarBuilder *carEconomyBuilder = new EconomyCar();
+    CarBuilder *carEconomyBuilder = new EconomyCar();
 
     //La classe Factory attraverso il metodo buildCar costruisce la macchina utilizando il CarBuilder passato al costruttore
     //Vengono cosi  nascosti all'utilizzatore i dettagli implementativi per la creazione dell'oggetto car
     Factory *fSuv = new Factory(carSuvBuilder);
-   // Factory *feconomy = new Factory(carEconomyBuilder);
-    //string dd = "ddd";
-    //BaseEngine *turboBoostEngine = new Boost(new Engine(EngineType::PETROL,"MotoreSuv"));
+    Factory *feconomy = new Factory(carEconomyBuilder);
 
-    //anX->echoEngine();
-
-    //fSuv->buildCar("Suv",turboBoostEngine);
     fSuv->buildCar();
     Car *carSuv = fSuv->getCar();
 
@@ -41,14 +36,10 @@ int main()
     cout << endl;
     cout << *carSuv << endl;
 
-    cout << endl;
-    cout << "------------- Echo del motore: -------------" << endl;
-    cout << endl;
-    cout << carSuv->echoEngine() << endl;
-/*
-    BaseEngine *eco = new Boost(new Engine(EngineType::PETROL,"ssss"));
 
-    feconomy->buildCar("500",*eco);
+
+
+  //  feconomy->buildCar("500",*eco);
     Car *carEconomy = feconomy->getCar();
    // cout << *carSuv << endl;
 
@@ -59,7 +50,7 @@ int main()
     cout << endl;
     cout << *carEconomy << endl;
 
-
+/*
      cout << endl;
     cout << "------------- Modifico 500: -------------" << endl;
     cout << endl;
@@ -122,8 +113,8 @@ int main()
     garage = carServiceInterface.getAllCars();
     cout << "Garage contains  : " << garage.size() << " cars" << endl;
 
-    //
     */
+
 
     return 0;
 }
