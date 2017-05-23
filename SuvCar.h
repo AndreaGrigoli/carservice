@@ -17,6 +17,22 @@ class SuvCar : public CarBuilder
         car->setName("SUV");
         }
 
+        void buildGPS(){
+        car->setGPS(true);
+        }
+
+        void buildBluetooth(){
+        car->setBluetooth(true);
+        }
+
+        void buildAutomaticGearBoxes(){
+        car->setAutomaticGearBoxes(true);
+        }
+
+        void buildBrand(){
+        car->setBrand("Renault");
+        }
+
 
         void buildColor(){
         car->setColor("Nero");
@@ -32,7 +48,7 @@ class SuvCar : public CarBuilder
 
         void buildEngine(){
         //void buildEngine(BaseEngine  & anX){
-        BaseEngine *turboBoostEngine = new Boost(new Turbo(new Engine(EngineType::PETROL,"MotoreSuv")));
+        BaseEngine *turboBoostEngine = new Boost(new Turbo(new Engine(EngineType::DIESEL,"MotoreSuv")));
         //car->setEngine("MotoreSuv",EngineType::DIESEL);
         car->setEngine(turboBoostEngine);
         }

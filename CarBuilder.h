@@ -16,6 +16,10 @@ class CarBuilder
  virtual void buildHorsePower()=0;
  //virtual void buildName(string name)=0;
  virtual void buildName()=0;
+  virtual void buildBluetooth()=0;
+ virtual void buildAutomaticGearBoxes()=0;
+ virtual void buildBrand()=0;
+  virtual void buildGPS()=0;
 
 
 

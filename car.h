@@ -27,6 +27,10 @@ class Car:public AbstractCar
             this->_color = color;
         }
 
+         void setBrand(string brand)
+        {
+            this->_brand = brand;
+        }
 
 
         void setWheels(string wheels)
@@ -49,6 +53,20 @@ class Car:public AbstractCar
             this->_darkGlass = darkGlass;
         }
 
+         void setGPS(bool GPS)
+        {
+            this->_GPS = GPS;
+        }
+
+         void setBluetooth(bool bluetooth)
+        {
+            this->_bluetooth = bluetooth;
+        }
+
+         void setAutomaticGearBoxes(bool ag)
+        {
+            this->_ag = ag;
+        }
           string getName()
         {
             return this->_name;
@@ -103,8 +121,8 @@ class Car:public AbstractCar
         int _id;
         BaseEngine *_engine;
         HorsePower _horsePower;
-        string _color, _wheels, _interior,_licensePlate,_name;
-        bool _airConditioning, _darkGlass;
+        string _color, _wheels, _interior,_brand,_name;
+        bool _airConditioning, _darkGlass, _GPS, _bluetooth, _ag;
 
 
 };

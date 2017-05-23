@@ -39,7 +39,8 @@ class EconomyCar:public CarBuilder{
         }
 
         void buildEngine(){
-          BaseEngine *turboBoostEngine = new Boost(new Turbo(new Engine(EngineType::PETROL,"Motore500")));
+         // BaseEngine *turboBoostEngine = new Boost(new Turbo(new Engine(EngineType::PETROL,"Motore500")));
+          BaseEngine *turboBoostEngine = new Engine(EngineType::PETROL,"Motore500");
         //car->setEngine("MotoreSuv",EngineType::DIESEL);
         car->setEngine(turboBoostEngine);
         }
@@ -51,6 +52,24 @@ class EconomyCar:public CarBuilder{
         Car* getCar(){
             return this->car;
         }
+
+         void buildAutomaticGearBoxes(){
+        car->setAutomaticGearBoxes(true);
+        }
+
+
+        void buildGPS(){
+        car->setGPS(false);
+        }
+
+          void buildBluetooth(){
+        car->setBluetooth(false);
+        }
+
+         void buildBrand(){
+        car->setBrand("Renault");
+        }
+
 
 };
 

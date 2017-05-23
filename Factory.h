@@ -15,16 +15,7 @@ class Factory
                 return carBuilder->getCar();
             }
 
- /*void buildCar(string name,BaseEngine  *anX)
- {
-   carBuilder->buildName(name);
-   carBuilder->buildColor();
-   carBuilder->buildAirConditioning();
-   carBuilder->buildDarkGlass();
-   carBuilder->buildEngine(*anX);
-   carBuilder->buildInterior();
-   carBuilder->buildWheels();
- }*/
+
  void buildCar()
  {
    carBuilder->buildName();
@@ -34,6 +25,10 @@ class Factory
    carBuilder->buildEngine();
    carBuilder->buildInterior();
    carBuilder->buildWheels();
+   carBuilder->buildBrand();
+   carBuilder->buildAutomaticGearBoxes();
+   carBuilder->buildGPS();
+   carBuilder->buildBluetooth();
  }
 
 

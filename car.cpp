@@ -15,7 +15,7 @@ Car::Car(Engine engine,string name) : _licensePlate("XXXXXXX"), _name(name)
 }*/
 
 
-Car::Car( const Car &car ):_name(car._name),_licensePlate(car._licensePlate),_engine(car._engine),_id(car._id),_color(car._color),_wheels(car._wheels),_interior(car._interior),_darkGlass(car._darkGlass),_airConditioning(car._airConditioning),_horsePower(car._horsePower)
+Car::Car( const Car &car ):_name(car._name),_brand(car._brand),_engine(car._engine),_id(car._id),_color(car._color),_wheels(car._wheels),_interior(car._interior),_darkGlass(car._darkGlass),_airConditioning(car._airConditioning),_horsePower(car._horsePower),_ag(car._ag),_GPS(car._GPS),_bluetooth(car._bluetooth)
 {
 
 
@@ -43,8 +43,8 @@ Car::~Car()
 void Car::print( ostream & output )
 {
     output << "(Name: " << _name << endl;
-    output << " LicensePlate: " << _licensePlate <<endl;
-   // output << " Engine: " << _engine->echoEngine() <<endl;
+    output << " Brand: " << _brand <<endl;
+    output << " Engine: " << _engine->echoEngine() <<endl;
     output << " Color: " << _color  <<endl;
     output << " Wheels: " << _wheels  <<endl;
     output << " Dark Glass: " << _darkGlass  <<endl;

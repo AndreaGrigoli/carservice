@@ -36,10 +36,10 @@ int main()
     cout << endl;
     cout << *carSuv << endl;
 
+//delete(carSuv);
 
 
-
-  //  feconomy->buildCar("500",*eco);
+    feconomy->buildCar();
     Car *carEconomy = feconomy->getCar();
    // cout << *carSuv << endl;
 
@@ -50,7 +50,7 @@ int main()
     cout << endl;
     cout << *carEconomy << endl;
 
-/*
+
      cout << endl;
     cout << "------------- Modifico 500: -------------" << endl;
     cout << endl;
@@ -70,6 +70,7 @@ int main()
 
     carServiceInterface.saveCar(*carSuv);
     //cout << *carSuv << endl;
+
     carServiceInterface.saveCar(*carEconomy);
 
      cout << endl;
@@ -97,7 +98,8 @@ int main()
     cout << endl;
 
     //Il metodo getCar aspetta come parametro il nome della macchina
-    Car car = carServiceInterface.getCar("Suv");
+    Car car = carServiceInterface.getCar("SUV");
+
     cout << car << endl;
     //cout << car.getHorsePower();
 
@@ -113,7 +115,7 @@ int main()
     garage = carServiceInterface.getAllCars();
     cout << "Garage contains  : " << garage.size() << " cars" << endl;
 
-    */
+
 
 
     return 0;
