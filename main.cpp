@@ -6,6 +6,7 @@
 #include "EconomyCar.h"
 #include "Boost.h"
 #include "Engine.h"
+#include "State.h"
 
 using namespace std;
 
@@ -13,6 +14,20 @@ void func(const std::vector<Car>& vec);
 
 int main()
 {
+
+     State* pState = new FirstPageState();
+     Context* pContext = new Context(pState);
+     pContext->GoNext();
+     pContext->GoNext();
+     pContext->GoNext();
+     pContext->GoNext();
+     pContext->GoNext();
+
+
+
+
+    /*
+
     //Builder design pattern
 
 
@@ -116,7 +131,7 @@ int main()
     cout << "Garage contains  : " << garage.size() << " cars" << endl;
 
 
-
+*/
 
     return 0;
 }
